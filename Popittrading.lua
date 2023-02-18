@@ -14,7 +14,7 @@ _G.selectItem2 = "A"
 _G.autoBuy3 = true
 _G.selectItem3 = "Hand Yellow"
 _G.autoBuy4 = true
-_G.selectItem4 = "Heart Lightstick"
+_G.selectItem4 = "Heart Balloon"
 
 --Functions
 
@@ -265,7 +265,7 @@ ItemBuyTab4:AddDropdown({
 ItemBuyTab5:AddDropdown({
 	Name = "BuyItem",
 	Default = "Heart Lightstick",
-	Options = {"Heart Lightstick"},
+	Options = {"Heart Balloon","Corazón Cake","Heart Gift","Heart Headphones","Heart Light","Heart Lightstick"},
 	Callback = function(Value)
 		_G.selectItem4 = Value
     print(_G.selectItem4)

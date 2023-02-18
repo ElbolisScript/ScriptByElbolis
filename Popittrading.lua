@@ -13,6 +13,8 @@ _G.autoBuy2 = true
 _G.selectItem2 = "A"
 _G.autoBuy3 = true
 _G.selectItem3 = "Hand Yellow"
+_G.autoBuy4 = true
+_G.selectItem4 = "Heart Lightstick"
 
 --Functions
 
@@ -44,6 +46,13 @@ game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(_G.sele
    end
 end
 
+function autoBuy4()
+    while _G.autoBuy4 == true do
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(_G.selectItem3)
+    wait(.1)
+   end
+end
+
 --Tabs
 
 local ItemBuyTab = Window:MakeTab({
@@ -66,6 +75,12 @@ local ItemBuyTab3 = Window:MakeTab({
 
 local ItemBuyTab4 = Window:MakeTab({
 	Name = "Hands",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local ItemBuyTab5 = Window:MakeTab({
+	Name = "Valentines",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -196,6 +211,15 @@ ItemBuyTab4:AddToggle({
 	end
 })
 
+ItemBuyTab5:AddToggle({
+	Name = "Auto Buy Valentines",
+	Default = false,
+	Callback = function(Value)
+		_G.autoBuy3 = Value
+    autoBuy3()
+	end
+})
+
 --Dropdowns
 
 ItemBuyTab:AddDropdown({
@@ -235,6 +259,16 @@ ItemBuyTab4:AddDropdown({
 	Callback = function(Value)
 		_G.selectItem3 = Value
     print(_G.selectItem3)
+	end    
+})
+
+ItemBuyTab5:AddDropdown({
+	Name = "BuyItem",
+	Default = "Heart Lightstick",
+	Options = {"Heart Lightstick"},
+	Callback = function(Value)
+		_G.selectItem4 = Value
+    print(_G.selectItem4)
 	end    
 })
 

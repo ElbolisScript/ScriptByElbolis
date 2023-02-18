@@ -215,8 +215,8 @@ ItemBuyTab5:AddToggle({
 	Name = "Auto Buy Valentines",
 	Default = false,
 	Callback = function(Value)
-		_G.autoBuy3 = Value
-    autoBuy3()
+		_G.autoBuy4 = Value
+    autoBuy4()
 	end
 })
 
@@ -276,3 +276,4 @@ ItemBuyTab5:AddDropdown({
 
 end
 OrionLib:Init()
+--Added valentines--

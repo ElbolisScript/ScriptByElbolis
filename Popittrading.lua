@@ -48,7 +48,7 @@ end
 
 function autoBuy4()
     while _G.autoBuy4 == true do
-game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(_G.selectItem3)
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(_G.selectItem4)
     wait(.1)
    end
 end

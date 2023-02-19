@@ -315,7 +315,7 @@ EggsTab:AddDropdown({
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
 	Default = "Youtuber Egg",
-	Options = {"Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg"},
+	Options = {"Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg","Demon Egg"},
 	Callback = function(Value)
 		_G.selectEgg1 = Value
     print(_G.selectEgg1)
@@ -338,6 +338,4 @@ UpgradeTab:AddDropdown({
 end
 OrionLib:Init()
 
---sub to ElbolisMW
---New Update
---no update 
+--Added Demon Egg--

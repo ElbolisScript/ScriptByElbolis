@@ -1,8 +1,7 @@
 if game.PlaceId == 11901437921 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🍀x2 LUCKY!🍀] Tapping fantasy!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
-
+local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🎉1MIL + 3x🍀] Tapping Fantasy!, HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
 _G.autoTap = true

@@ -1,7 +1,7 @@
 if game.PlaceId == 11901437921 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🎉1MIL + 3x🍀] Tapping Fantasy!, HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
+local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🎉1MIL + 3x🍀] Tapping Fantasy!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
 _G.autoTap = true
@@ -9,8 +9,6 @@ _G.autoHatch = true
 _G.selectEgg = "Common Egg"
 _G.autoHatch1 = true
 _G.selectEgg1 = "Youtuber Egg"
-_G.autoRebirth = true
-_G.selectRebirth = 1
 _G.autoUpgrade = true
 _G.selectUpgrade = "Pet Equipped"
 
@@ -62,13 +60,6 @@ game:GetService("ReplicatedStorage").Events.OpenEgg:FireServer(unpack(args))
     end
  end
 
-function autoRebirth()
-    while _G.autoRebirth == true do 
-game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(_G.selectRebirth)
-    wait(.01)
-end
-end
-
 function autoCraftAll()
     while _G.autoCraftAll == true do
 game:GetService("ReplicatedStorage").Events.PetAction:InvokeServer("CraftAll")
@@ -96,12 +87,6 @@ local TeleportTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local RebirthTab = Window:MakeTab({
-	Name = "Rebirth",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
 local EggsTab = Window:MakeTab({
 	Name = "Eggs",
 	Icon = "rbxassetid://4483345998",
@@ -121,15 +106,6 @@ FarmTab:AddToggle({
 	Callback = function(Value)
 		_G.autoTap = Value
     autoTap()
-	end
-})
-
-RebirthTab:AddToggle({
-	Name = "Auto Rebirth[more Coming soon",
-	Default = false,
-	Callback = function(Value)
-		_G.autoRebirth = Value
-    autoRebirth()
 	end
 })
 
@@ -282,16 +258,6 @@ game:GetService("ReplicatedStorage").Events.PortalTP:FireServer("Home")
   
 -- Dropdowns
 
-RebirthTab:AddDropdown({
-	Name = "Select Rebirth",
-	Default = 1,
-	Options = {1,5,10,50,100,250,500,1000,4200,10000,25000,50000,75000,420000,910000,1200000,10000000,50000000,100000000,150000000,500000000,750000000,1000000000},
-	Callback = function(Value)
-		_G.selectRebirth = Value
-    print(_G.selectRebirth)
-	end
-})
-
 EggsTab:AddDropdown({
 	Name = "Select Egg",
 	Default = "Common Egg",
@@ -305,7 +271,7 @@ EggsTab:AddDropdown({
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
 	Default = "Youtuber Egg",
-	Options = {"Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg","Demon Egg"},
+	Options = {"Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg","Demon Egg","1M Egg"},
 	Callback = function(Value)
 		_G.selectEgg1 = Value
     print(_G.selectEgg1)

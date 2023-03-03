@@ -1,4 +1,4 @@
-if game.PlaceId == 11901437921 then
+if game.PlaceId == 12480945489 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🔮MAGIC!🔮]  Tapping Fantasy!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})

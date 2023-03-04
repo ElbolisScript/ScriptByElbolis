@@ -29,19 +29,7 @@ end
 
 function autoHatch()
     while _G.autoHatch == true do 
-local args = {
-    [1] = _G.selectEgg,
-    [2] = true,
-    [4] = true,
-    [5] = {
-        ["1"] = true,
-        ["4"] = false,
-        ["3"] = true,
-        ["2"] = true
-    }
-}
-
-game:GetService("ReplicatedStorage").Events.OpenEgg:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Remote:FireServer("Pet","Egg","Hatch",_G.selectEgg,3)
 
       wait(.1)
     end
@@ -49,20 +37,7 @@ game:GetService("ReplicatedStorage").Events.OpenEgg:FireServer(unpack(args))
 
 function autoHatch1()
     while _G.autoHatch1 == true do 
-local args = {
-    [1] = _G.selectEgg1,
-    [2] = true,
-    [4] = true,
-    [5] = {
-        ["1"] = true,
-        ["4"] = false,
-        ["3"] = true,
-        ["2"] = true
-    }
-}
-
-game:GetService("ReplicatedStorage").Events.OpenEgg:FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage").Remote:FireServer("Pet","Egg","Hatch",_G.selectEgg1,3)
       wait(.1)
     end
  end

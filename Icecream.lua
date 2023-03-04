@@ -125,7 +125,7 @@ game:GetService("ReplicatedStorage").Events.PortalTP:FireServer("Home")
 EggsTab:AddDropdown({
 	Name = "Select Egg",
 	Default = "Basic Egg",
-	Options = {"Basic Egg","Novice Egg","Advanced Egg"},
+	Options = {"Basic Egg","Novice Egg","Advanced Egg","Chocolate Egg"},
 	Callback = function(Value)
 		_G.selectEgg = Value
     print(_G.selectEgg)

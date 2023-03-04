@@ -44,6 +44,7 @@ game:GetService("ReplicatedStorage").Remote:FireServer("Pet","Egg","Hatch",_G.se
 
 
 --Tabs
+
 local FarmTab = Window:MakeTab({
 	Name = "AutoFarm",
 	Icon = "rbxassetid://4483345998",
@@ -101,6 +102,12 @@ EggsTab:AddToggle({
 
 
 -- Buttons
+FarmTab:AddButton({
+	Name = "100k rebirth",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Remote:FireServer("rebirthBoard",3,5)
+  	end    
+})
 
 TeleportTab:AddButton({
 	Name = "Teleport To Moon!",

@@ -1,22 +1,28 @@
 if game.PlaceId == 12480945489 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🔮MAGIC!🔮]  Tapping Fantasy!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
+local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🎉RELEASE!🎉] Ice Cream Clicker!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
 _G.autoTap = true
+_G.autoSell = true
 _G.autoHatch = true
 _G.selectEgg = "Basic Egg"
 _G.autoHatch1 = true
 _G.selectEgg1 = "ReleaseEgg"
-_G.autoUpgrade = true
-_G.selectUpgrade = "Pet Equipped"
 
 --Functions
 
 function autoTap()
     while _G.autoTap == true do
 game:GetService("ReplicatedStorage").Remote:FireServer("Roll2")
+    wait(.0001)
+  end
+end
+
+function autoSell()
+    while _G.autoSell == true do
+game:GetService("ReplicatedStorage").Remote:FireServer("Sell2",workspace.Sells.Lobby)
     wait(.0001)
   end
 end
@@ -61,19 +67,6 @@ game:GetService("ReplicatedStorage").Events.OpenEgg:FireServer(unpack(args))
     end
  end
 
-function autoCraftAll()
-    while _G.autoCraftAll == true do
-game:GetService("ReplicatedStorage").Events.PetAction:InvokeServer("CraftAll")
-    wait(20)
-end
-end
-
-function autoUpgrade()
-    while _G.autoUpgrade == true do
-game:GetService("ReplicatedStorage").Functions.BuyUpgrade:InvokeServer("_G.selectUpgrade")
-    wait(.1)
-end
-end
 
 --Tabs
 local FarmTab = Window:MakeTab({
@@ -104,12 +97,12 @@ FarmTab:AddToggle({
 	end
 })
 
-EggsTab:AddToggle({
-	Name = "Auto Craft All",
+FarmTab:AddToggle({
+	Name = "Auto Sell",
 	Default = false,
 	Callback = function(Value)
-		_G.autoCraftAll = Value
-    autoCraftAll()
+		_G.autoSell = Value
+    autoSell()
 	end
 })
 

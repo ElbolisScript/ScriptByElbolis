@@ -264,7 +264,7 @@ ItemBuyTab4:AddDropdown({
 
 ItemBuyTab5:AddDropdown({
 	Name = "BuyItem",
-	Default = "Heart Lightstick",
+	Default = "Heart Balloon",
 	Options = {"Heart Balloon","Corazón Cake","Heart Gift","Heart Headphones","Heart Light","Heart Lightstick"},
 	Callback = function(Value)
 		_G.selectItem4 = Value

@@ -4,6 +4,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🌌GALAXY!🌌] Ice Cream Clicker!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
+
 _G.autoTap = true
 _G.autoSell = true
 _G.autoHatch = true

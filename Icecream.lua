@@ -1,7 +1,7 @@
 if game.PlaceId == 12480945489 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🎉RELEASE!🎉] Ice Cream Clicker!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
+local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🌌GALAXY!🌌] Ice Cream Clicker!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
 _G.autoTap = true
@@ -102,6 +102,7 @@ EggsTab:AddToggle({
 
 
 -- Buttons
+
 FarmTab:AddButton({
 	Name = "100k rebirth",
 	Callback = function()
@@ -132,7 +133,7 @@ game:GetService("ReplicatedStorage").Events.PortalTP:FireServer("Home")
 EggsTab:AddDropdown({
 	Name = "Select Egg",
 	Default = "Basic Egg",
-	Options = {"Basic Egg","Novice Egg","Advanced Egg","Chocolate Egg","Aqua Egg","Galaxy Egg"},
+	Options = {"Basic Egg","Novice Egg","Advanced Egg","Chocolate Egg","Aqua Egg","Magma Egg","Galaxy Egg"},
 	Callback = function(Value)
 		_G.selectEgg = Value
     print(_G.selectEgg)

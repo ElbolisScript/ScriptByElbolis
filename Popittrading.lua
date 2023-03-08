@@ -1,7 +1,7 @@
 if game.PlaceId == 7346416636 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | Pop It Trading ✨!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
+local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | Popit!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
 

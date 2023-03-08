@@ -1,7 +1,7 @@
 if game.PlaceId == 12480945489 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🌌GALAXY!🌌] Ice Cream Clicker!", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
+local Window = OrionLib:MakeWindow({Name = "Ice Cream Clicker", HidePremium = false, IntroText = "Elbolis Hub", SaveConfig = true, ConfigFolder = "esbanuwu"})
 
 --Values
 

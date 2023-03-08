@@ -151,7 +151,7 @@ game:GetService("ReplicatedStorage").Remote:FireServer("Zone","Travel","Lobby")
 EggsTab:AddDropdown({
 	Name = "Select Egg",
 	Default = "Basic Egg",
-	Options = {"Basic Egg","Novice Egg","Advanced Egg","Chocolate Egg","Aqua Egg","Magma Egg","Galaxy Egg"},
+	Options = {"Basic Egg","Novice Egg","Advanced Egg","Chocolate Egg","Aqua Egg","Magma Egg","Galaxy Egg","Toxic Etg"},
 	Callback = function(Value)
 		_G.selectEgg = Value
     print(_G.selectEgg)
@@ -160,8 +160,8 @@ EggsTab:AddDropdown({
 
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
-	Default = "Release Egg",
-	Options = {"Release Egg"},
+	Default = "Coming Soon",
+	Options = {"Coming Soon"},
 	Callback = function(Value)
 		_G.selectEgg1 = Value
     print(_G.selectEgg1)

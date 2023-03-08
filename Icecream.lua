@@ -105,6 +105,34 @@ EggsTab:AddToggle({
 -- Buttons
 
 TeleportTab:AddButton({
+	Name = "Teleport To Radioactive!",
+	Callback = function()
+game:GetService("ReplicatedStorage").Remote:FireServer("Zone","Travel","Radioactive")
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Teleport To Galaxy!",
+	Callback = function()
+game:GetService("ReplicatedStorage").Remote:FireServer("Zone","Travel","Galaxy")
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Teleport To Vulcano!",
+	Callback = function()
+game:GetService("ReplicatedStorage").Remote:FireServer("Zone","Travel","Vulcano")
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Teleport To Aqua!",
+	Callback = function()
+game:GetService("ReplicatedStorage").Remote:FireServer("Zone","Travel","Aqua")
+  	end    
+})
+
+TeleportTab:AddButton({
 	Name = "Teleport To Hot Chocolate!",
 	Callback = function()
 game:GetService("ReplicatedStorage").Remote:FireServer("Zone","Travel","Hot Chocolate")

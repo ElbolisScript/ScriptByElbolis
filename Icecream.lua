@@ -10,7 +10,7 @@ _G.autoSell = true
 _G.autoHatch = true
 _G.selectEgg = "Basic Egg"
 _G.autoHatch1 = true
-_G.selectEgg1 = "ReleaseEgg"
+_G.selectEgg1 = "100K Egg"
 
 --Functions
 
@@ -160,8 +160,8 @@ EggsTab:AddDropdown({
 
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
-	Default = "Coming Soon",
-	Options = {"Coming Soon"},
+	Default = "100K Egg",
+	Options = {"100K Egg"},
 	Callback = function(Value)
 		_G.selectEgg1 = Value
     print(_G.selectEgg1)
